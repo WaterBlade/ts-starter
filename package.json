@@ -9,7 +9,7 @@
     "test:cover": "jest --coverage",
     "clean": "trash dist",
     "compile": "tsc",
-    "build": "run-s clean compile",
+    "build": "run-s fix test:cover clean compile",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:lint": "eslint ./src --ext .ts,.tsx"
